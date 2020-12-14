@@ -6,11 +6,11 @@ import wave
 import os
 import time
 
-timecounter = 5
-for i in range(5):
-    timecounter = 5 - i
-    print('recoring will start in', timecounter, 'seconds')
-    time.sleep(1)
+#timecounter = 5
+#for i in range(5):
+#    timecounter = 5 - i
+#    print('recoring will start in', timecounter, 'seconds')
+#    time.sleep(1)
 
 
 class Recoder:
