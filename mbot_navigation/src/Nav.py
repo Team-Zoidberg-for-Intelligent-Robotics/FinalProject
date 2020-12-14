@@ -10,7 +10,8 @@ import copy
 import math
 import Node
 import A_Star
-
+import record
+import googletranslate
 
 class Nav:
     def __init__(self, startX, startY, roomNmber):
@@ -189,6 +190,14 @@ class Nav:
 
 if __name__ == '__main__':
     rospy.init_node("mbot_nav")
-    nav = Nav(-0.1,-0.1,3)
+    r = record.Recoder()
+    r.recoder()
+    r.savewav("/home/zm/Desktop/test.wav")
+    t = googletranslate.Translate()
+    t.match()
+    roomNumber = t.getRealRoomNumber()
+    print(roomNumber)
+    if roomNumber is not None:
+        nav = Nav(-0.1,-0.1,roomNumber)
     nav.move()
     rospy.spin()
